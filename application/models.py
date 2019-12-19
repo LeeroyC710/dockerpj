@@ -10,25 +10,25 @@ def load_user(id):
 #---------------first table with unique user_id------------------
 
 class Prizes(db.Model):
-        id = db.column(db.Integer, primary_keys=True)
-        user_name = db.Column(db.String(25), nullable=False, unique=True)
+    id = db.column(db.Integer, primary_keys=True)
+    user_name = db.Column(db.String(25), nullable=False, unique=True)
         pound_prize = db.Column(db.String(50), nullable=False)
 
-        def __repr__(self):
-            return ''.join([
+    def __repr__(self):
+        return ''.join([
                     'User_name:' , self.user_name, '\r\n',
                     'Pound_prize:' , self.pound_prize,
-            ])
+        ])
 
 #-------------------could add another table for cards-- moscow ---------------
 class Cards(db.Model):
-        id = db.column(db.Integer, primary_keys=True)
-        card_name = db.Column(db.String(25) nullable=False, unique=True)
-        card_worth = db.Column(db.String, nullable=False)
+    id = db.column(db.Integer, primary_keys=True)
+    card_name = db.Column(db.String(25), nullable=False, unique=True)
+    card_worth = db.Column(db.String, nullable=False)
 
-        def __repr__(self):
-            return ''.join([
-                    'Card_name:' , self.card_name, '\r\n',
-                    'Card_worth:' , self.card_worth,
-            ])
+    def __repr__(self):
+        return ''.join([
+                'Card_name:' , self.card_name, '\r\n',
+                'Card_worth:' , self.card_worth,
+        ])
 

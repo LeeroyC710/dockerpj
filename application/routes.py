@@ -24,7 +24,14 @@ def route_users():
         user_data = {"name": user.name, "email": user.email}
         users_data.append(user_data)
     senseless_print()
-    return jsonify(users_data)
+    return json(users_data)
+
+@app.route('/prize_gen_big', methods=['Get'])
+def prize_gen_big():
+    response=requests.get("url for prize_gen")
+    response1=requests.get("url for prize_gen")
+    return render_template('prize_gen_big.html', title= 'Prize', response=response.txt, response1=response1.txt)
+
 
 #--------------this will help debugging whilst developing 
 if __name__=="__main__":
