@@ -1,0 +1,1 @@
+#pip freeze all the files that you are going to install for the flask app
