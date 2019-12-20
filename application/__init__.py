@@ -1,4 +1,4 @@
-from flask import os
+from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager 
 from os import getenv
@@ -11,7 +11,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SECRET_KEY'] = getenv('SECRET_KEY')
 db = SQLAlchemy(app)
 '''
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:5555@35.246.46.229/flaskproject'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:5555@35.246.46.229/dockerproject'
 db = SQLAlchemy(app)
 '''
 

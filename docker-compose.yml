@@ -75,6 +75,6 @@ services:
     environment: 
         -MYSQL_USER= ROOT
         -MYSQL_PASSWORD=5555
-        -MYSQL_IP= #DB-IP
-        -MYSQL_DB= #DB_NAME
+        -MYSQL_IP= 35.246.46.229
+        -MYSQL_DB= DOCKERPROJECT
         -SECRET_KEY= #secret (could be anything)
