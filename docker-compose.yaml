@@ -23,8 +23,8 @@ services:
           protocol: tcp
       environment:
         - MYSQL_USER=${MYSQL_USER}
-        - MYSQL_PASSWORD=${MYSQL_PASSWD}
-        - MYSQL_URL=${MYSQL_URL}
+        - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+        - MYSQL_IP=${MYSQL_IP}
         - MYSQL_DB=${MYSQL_DB}
         - SECRET_KEY=${SECRET_KEY} 
  
