@@ -6,8 +6,8 @@ WORKDIR /docker-flask
 
 COPY . .
 
-RUN ["pip3", "install", "pipenv"]
+RUN pip install --upgrade pip 
 
-RUN [pip install -r requirements.txt]
+RUN pip install -r requirements.txt
 
-CMD pipenv run python main.py
+CMD python3 app.py

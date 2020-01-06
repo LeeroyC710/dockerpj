@@ -26,7 +26,7 @@ th {
 <th> UserName</th>
 <th> Prize </th>
 </tr>
-{% for event in event %}
+{% for prize in prize %}
 <tr>
 <td>{{ prizes.id }}</td>
 <td>{{ prizes.user_name }}</td>
@@ -38,15 +38,3 @@ th {
 {% endblock body_content %}
 </html>
 
-#<html>
-    <head>
-        {% if title %}
-        <title>{{ title }} - Microblog</title>
-        {% else %}
-        <title>Welcome to Microblog!</title>
-        {% endif %}
-    </head>
-    <body>
-        <h1>Hello, {{ user.username }}!</h1>
-    </body>
-</html>

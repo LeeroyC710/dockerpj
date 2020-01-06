@@ -3,7 +3,6 @@ import sys
 import requests
 import randint
 import string
-app = Flask(__name__)
 
 #---------------prize generator function------------------------------
 @app.route('/prize_gen_big', methods=['GET', 'POST'])
