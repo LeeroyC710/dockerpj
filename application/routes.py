@@ -1,6 +1,6 @@
 from flask import render_template, redirect, url_for, request
 from application import app, db
-from application.models import Prizes
+from application.models import prizes
 #from application.forms import PrizesForm
 from flask_login import current_user
 
@@ -8,7 +8,7 @@ from flask_login import current_user
 @app.route('/')
 @app.route('/home')
 def home():
-    prizesData = Prizes.query.all()
+    prizesData = prizes.query.all()
     return render_template('home.html', title='Home', prizes=prizesData)
 
 #-----------create a path that allows connection with the front----------------- 

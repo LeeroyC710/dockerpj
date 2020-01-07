@@ -9,11 +9,11 @@ def load_user(id):
 
 #-------------------user modeling table----------------------------------
 
-class User(db.Model, UserMixin):
+class user(db.Model, UserMixin):
         id = db.Column(db.Integer, primary_key=True)
         user_name = db.Column(db.String(30), unique=True)
         email = db.Column(db.String(150), nullable=False, unique=True)
-        prizes = db.relationship('Prizes', backref='author', lazy=True)
+        prizes = db.relationship('prizes', backref='author', lazy=True)
 
         def __repr__(self):
               return ''.join([
@@ -22,9 +22,9 @@ class User(db.Model, UserMixin):
                         'Email: ', self.email, '\r\n',
                         'Prizes ', self.prizes, ' ', self.prizes])
 #--------------------prizes table-------------------------------------------
-class Prizes(db.Model):
+class prizes(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    user_id = db.Column(db.Integer, db.ForeignKey("user_id"), nullable=false)
+    user_id = db.Column(db.Integer, db.ForeignKey("user.id"), nullable=False)
     pound_prize = db.Column(db.String(50), nullable=False)
 
     def __repr__(self):
