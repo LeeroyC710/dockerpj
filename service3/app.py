@@ -8,13 +8,9 @@ app = Flask(__name__)
 
 
 @app.route('/', methods=(['POST'])  
-def random_id(length):
-    number = '0123456789'
-    alpha = 'abcdefghijklmnopqrstuvwxyz'
-    id = ''
-    for i in range(0,length,2):
-        id += random.choice(number)
-        id += random.choice(alpha)
-    return id
+def prize_generator():
+random_number = requests.post(http://service2:5000).text
+random_letter = requests.post(http://service1:3000).text
+
 
 
