@@ -2,39 +2,13 @@
 <!DOCTYPE html>
 <html>
 {% block body_content %}
-<head>
-    <h1></h1>
-    <h2>Prizes</h2>
-<style>
-table, th, td {
-  border: 1px solid black;
-  border-style: dotted;
-  border-collapse: collapse;
-}
-th, td { 
-    padding: 5px;
-    }
-th { 
-    text-align: left;
-    }
-</style>
-</head>
-<table style="width:100%">
-<body>
-<tr>
-<th> ID</th>
-<th> UserName</th>
-<th> Prize </th>
-</tr>
-{% for prize in prize %}
-<tr>
-<td>{{ prizes.id }}</td>
-<td>{{ prizes.user_name }}</td>
-<td>{{ prizes.prize }}</td>
-<td><button type="button"> cash-in </button></td>
-</tr>
-{% endfor %}
-</body>
+        <h1>Home Page</h1>
+        <p>Welcome to this web app!</p>
+        {% for post in posts %}
+                <div>
+			<p> {{ random_prize }} is your prize. </p>
+                </div>
+        {% endfor %}
 {% endblock body_content %}
 </html>
 
