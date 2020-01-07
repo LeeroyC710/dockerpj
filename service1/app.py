@@ -6,14 +6,14 @@ import random
 import string
 
 #---------------prize generator function------------------------------
-@app.route('/prize_gen_big', methods=['GET', 'POST'])
-def prize_gen_big():
-    chance = random.randint(0,100)
+@app.route('/any_number', methods=[ 'POST'])
+def any_number():
+    chance = random.randint(0,25)
     prize = 0
     make_response = "You didn't win a prize"
     
-    if chance >= 70:
-        prize = random.randint(50,100)
+    if chance >= 13
+        prize = random.randint(0,25)
         resp = requests.get('http://notification:9000/notify').content    
 
     payload = request.get_json(force = True)

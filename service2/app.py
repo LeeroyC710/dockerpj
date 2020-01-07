@@ -2,22 +2,21 @@ from flask import Flask, jsonify, make_response
 import sys
 import requests
 import randint
+import random
 import string
 app = Flask(__name__)
 
-@app.route('/prize_gen_small', methods=['GET','POST'])
-def prize_gen_small():
-    chance = randint(0,100)
-    prize = 0
-    responds = "You didn't win a prize"
-
-    if chance >= 50:
-        prize = randint(1,10)
-        responds = requests.get('http://notification:9000/notify').content
+@app.route('/', methods=['GET','POST'])
+def random_letter():
+    l = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
+    return l[random.randint(0,25)]
+    responds = requests.get('http://notification:9000/notify').content
 
     payload = request.get_json(force = True)
-    payload["prize"] = prize
-    r = requests.post("http://db-connector:5001/user/user_name", payload)
+    payload["letter"] = letter
+    r = requests.post("http://db-connector:5001/user/user_name",payload)
+
+print(random_letter())
 
     return payload
 

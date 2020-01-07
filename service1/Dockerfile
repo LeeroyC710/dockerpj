@@ -1,13 +1,13 @@
 FROM python:3.6.8-alpine
 
-LABEL image for a very simple flask application
+LABEL image for prize generation app flask application
 
 WORKDIR /docker-flask
 
 COPY . .
 
-RUN ["pip3", "install", "pipenv"]
+RUN pip install --upgrade pip 
 
-RUN ["pipenv", "install"]
+RUN pip install -r requirements.txt
 
-CMD pipenv run python main.py
+CMD python3 app.py

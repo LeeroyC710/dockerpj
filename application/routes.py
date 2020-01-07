@@ -25,11 +25,11 @@ def route_users():
     senseless_print()
     return json(users_data)
 
-@app.route('/service1', methods=['Get'])
-def service1():
-    response=requests.get("url for prize_gen")
-    response1=requests.get("url for prize_gen")
-    return render_template('service1.html', title= 'Prize', response=response.txt, response1=response1.txt)
+@app.route('/service4', methods=['Get','Post'])
+def service4():
+    response=requests.get("url randnumber")
+    response1=requests.get("url randomletter")
+    return render_template('.html', title= 'Prize', response=response.txt, response1=response1.txt)
 
 
 #--------------this will help debugging whilst developing 
