@@ -7,33 +7,31 @@ from flask_login import UserMixin
 def load_user(id):
     return User.query.get(int(id))
 
-#---------------first table with unique user_id------------------
-
-class Prizes(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    user_name = db.Column(db.String(25), nullable=False, unique=True)
-    pound_prize = db.Column(db.String(50), nullable=False)
-
-    def __repr__(self):
-        return ''.join([
-                    'User_name:' , self.user_name, '\r\n',
-                    'Pound_prize:' , self.pound_prize,
-        ])
 #-------------------user modeling table----------------------------------
 
 class User(db.Model, UserMixin):
         id = db.Column(db.Integer, primary_key=True)
-        first_name = db.Column(db.String(30), nullable=False)
-        last_name = db.Column(db.String(30), nullable=False)
+        user_name = db.Column(db.String(30), unique=True)
         email = db.Column(db.String(150), nullable=False, unique=True)
-        password = db.Column(db.String(250), nullable=False)
         prizes = db.relationship('Prizes', backref='author', lazy=True)
 
         def __repr__(self):
               return ''.join([
                         'User ID: ', str(self.id), '\r\n',
+                        'User_name:', str(self.user_name), '\r\n',
                         'Email: ', self.email, '\r\n',
-                        'Name: ', self.first_name, ' ', self.last_name])
+                        'Prizes ', self.prizes, ' ', self.prizes])
+#--------------------prizes table-------------------------------------------
+class Prizes(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    user_id = db.Column(db.Integer, db.ForeignKey("user_id"), nullable=false)
+    pound_prize = db.Column(db.String(50), nullable=False)
+
+    def __repr__(self):
+        return ''.join([
+                    'User_id:' , self.user_id, '\r\n',
+                    'Pound_prize:' , self.pound_prize,
+        ])
 
 #-------------------could add another table for cards-- moscow ---------------
 '''class Cards(db.Model):
