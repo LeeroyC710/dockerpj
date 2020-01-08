@@ -17,7 +17,7 @@ services:
     app:
       image: flask:latest
       build: 
-        context: .
+        context: ./service4
       ports:
         - target: 5000
           protocol: tcp
