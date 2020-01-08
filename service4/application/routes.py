@@ -27,9 +27,9 @@ def route_users():
 
 @app.route('/service4', methods=['Get','Post'])
 def service4():
-    response=requests.get("url randnumber")
-    response1=requests.get("url randomletter")
-    return render_template('.html', title= 'Dare', response=response.txt, response1=response1.txt)
+    response=requests.get("http://service1:5000")
+    response1=requests.get("http://service2:5001")
+    return render_template('.html', title= 'Dare', response=request.txt, response1=requests.txt)
 
 
 #--------------this will help debugging whilst developing 

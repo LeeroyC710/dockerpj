@@ -28,4 +28,23 @@ services:
         - MYSQL_IP=${MYSQL_IP}
         - MYSQL_DB=${MYSQL_DB}
         - SECRET_KEY=${SECRET_KEY} 
- 
+     service1:
+       build:
+         context: ./service1
+           dockerfile: Dockerfile
+     service2: 
+       build: 
+         context: ./service2
+           dockerfile: Dockerfile
+     service3: 
+       build:
+         context: ./service3
+           dockerfile: Dockerfile
+     environment:
+        - MYSQL_USER=${MYSQL_USER}
+        - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+        - MYSQL_IP=${MYSQL_IP}
+        - MYSQL_DB=${MYSQL_DB}
+        - SECRET_KEY=${SECRET_KEY}
+
+
