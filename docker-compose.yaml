@@ -20,6 +20,7 @@ services:
         context: ./service4
       ports:
         - target: 5000
+          published: 5000
           protocol: tcp
       environment:
         - MYSQL_USER=${MYSQL_USER}
