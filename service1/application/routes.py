@@ -7,8 +7,8 @@ import string
 
 #---------------prize generator function------------------------------
 @app.route('/any_number', methods=[ 'POST'])
-def any_number():
-    chance = random.randint(0,9)
+def random_number():
+    chance = random.randint(0,3)
 
     return chance
 

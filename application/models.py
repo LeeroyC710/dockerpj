@@ -13,24 +13,24 @@ class user(db.Model, UserMixin):
         id = db.Column(db.Integer, primary_key=True)
         user_name = db.Column(db.String(30), unique=True)
         email = db.Column(db.String(150), nullable=False, unique=True)
-        prizes = db.relationship('prizes', backref='author', lazy=True)
+        dares = db.relationship('dare', backref='author', lazy=True)
 
         def __repr__(self):
               return ''.join([
                         'User ID: ', str(self.id), '\r\n',
                         'User_name:', str(self.user_name), '\r\n',
                         'Email: ', self.email, '\r\n',
-                        'Prizes ', self.prizes, ' ', self.prizes])
+                        'Dares ', self.dares, ' ', self.dares])
 #--------------------prizes table-------------------------------------------
-class prizes(db.Model):
+class dare(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     user_id = db.Column(db.Integer, db.ForeignKey("user.id"), nullable=False)
-    pound_prize = db.Column(db.String(50), nullable=False)
+    dare_line = db.Column(db.String(150), nullable=False)
 
     def __repr__(self):
         return ''.join([
                     'User_id:' , self.user_id, '\r\n',
-                    'Pound_prize:' , self.pound_prize,
+                    'Dare:' , self.dare,
         ])
 
 #-------------------could add another table for cards-- moscow ---------------
