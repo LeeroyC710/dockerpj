@@ -1,4 +1,4 @@
-FROM python:3.6.8FROM python:3.6.8-alpine
+FROM python:3.6.8
 
 LABEL image for prize generation app flask application
 
