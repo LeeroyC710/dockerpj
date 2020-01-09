@@ -1,8 +1,10 @@
 from flask import render_template, redirect, url_for, request
 from application import app, db
 from application.models import dare
-#from application.forms import DareForm
+from application.forms import DareForm, SubmitField
 from flask_login import current_user
+import requests, json
+
 
 #-----------this should fetch all the data from the db in prizes models--------
 '''@app.route('/')
@@ -32,13 +34,24 @@ def service4():
     form = DareForm()
     generator=""
 
-    if form.validate_on_submit():
+    if form.is_submitted():
         
-       response=requests.post("http://service3:5003/service3")
-       generator = response.json()['y0']
-    return render_template('home.html', title= 'Dare', generator=genarator, form=form)
+       response = requests.post("http://service3:5003")
+
+       if service4: 
+           random_letter=service4.json()["random_letter"]
+           random_number=service4.json()["random_number"]
+           service4=service4.json()["service4"]
+      
+       #app.logger.info("***************************************")
+       #app.logger.info(response)
+       #generator = response.json()['d0']
+       
+       return render_template('home.html', random_letter=random_letter, random_number=random_number, service4=service4)
+
+   # return render_template('home.html', title= 'Dare', form=form, generator=generator)
 
 
 #--------------this will help debugging whilst developing 
 #if __name__=="__main__":
-   # app.run(host ="0.0.0.0", debug=True, port=80)
+   # app.run(host ="0.0.0.0", debug=True, port=5000)

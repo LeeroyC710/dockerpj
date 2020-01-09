@@ -3,13 +3,13 @@ import sys
 import requests
 import string
 import random
-app = Flask(__name__)
+from application import app
 
-
-@app.route('/', methods=['POST'])
+@app.route('/', methods=['GET', 'POST'])
 def dare_generator():
-    random_number = requests.post('http://service2:5001').text
-    random_letter = requests.post('http://service1:5002').text
+    random_number = requests.post('http://service1:5001').text
+    random_letter = requests.post('http://service2:5002').json
+    return random_number
     if random_number.text=='0' and random_letter.text=='A': 
         return {"d0":"Number: 0, Letter: A, Dare: You have to avoid calling people by names for 5mins"} 
     elif random_number.text=='0' and random_letter.text=='B': 
@@ -32,8 +32,9 @@ def dare_generator():
         return {"d0":"Number: 2, Letter: B, Dare: Shout i love myself"} 
     elif random_number.text=='2' and random_letter.text=='C': 
         return {"d0":"Number: 2, Letter: C, Dare: Tell your friends you kissed Mariah Carey"}
-    elif random_number.text=='2' and random_letter.text=='D': 
+    else:  
         return {"d0":"Number: 2, Letter: D, Dare: Have an arm-wrestling with the person sitting next to you!"}
+    
 
 #if __name__=='__main__':
    # app.run(debug=True, host='0.0.0.0', port=5003)

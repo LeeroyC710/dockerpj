@@ -1,15 +1,13 @@
-from flask_wtf import Flaskform 
-from wtforms import StringField, SubmitField, PasswordField, BoolenField 
+from flask_wtf import FlaskForm 
+from wtforms import StringField, SubmitField, PasswordField 
 from wtforms.validators import DataRequired, Length, Email, EqualTo, ValidationError 
-from application.models import User, Dare 
+from application.models import user, dare 
 from flask_login import LoginManager, current_user
 from application import login_manager, db
 
 #-------------------------dare submit button-------------------------------
-class SubmitForm(FlaskForm):
-
-
-    submit = SubmitField('lets Go!')
+class DareForm(FlaskForm):
+    submit = SubmitField('Lets Go!')
 
 #-------------------------login form----------------------------------------
 '''class LoginForm(FlaskForm):

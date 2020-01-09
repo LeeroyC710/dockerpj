@@ -18,6 +18,7 @@ services:
       image: flask:latest
       build: 
         context: ./service4
+        dockerfile: ../Dockerfile
       ports:
         - target: 5000
           published: 5000
@@ -31,15 +32,15 @@ services:
     service1:
        build:
         context: ./service1
-        dockerfile: Dockerfile
+        dockerfile: ../Dockerfile
     service2: 
        build: 
         context: ./service2
-        dockerfile: Dockerfile
+        dockerfile: ../Dockerfile
     service3: 
        build:
         context: ./service3
-        dockerfile: Dockerfile
+        dockerfile: ../Dockerfile
 
 
 
