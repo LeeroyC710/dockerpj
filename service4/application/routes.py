@@ -29,7 +29,7 @@ def route_users():
     return json(users_data)
 
 @app.route('/', methods=['GET','POST'])
-def service4():
+def generator():
 
     form = DareForm()
     generator=""
@@ -37,17 +37,16 @@ def service4():
     if form.is_submitted():
         
        response = requests.post("http://service3:5003")
-
-       if service4: 
-           random_letter=service4.json()["random_letter"]
-           random_number=service4.json()["random_number"]
-           service4=service4.json()["service4"]
+       if generator.ok: 
+           random_letter=generator.json()["random_letter"]
+           random_number=generator.json()["random_number"]
+           generator=generator.json()["d0"]
       
        #app.logger.info("***************************************")
        #app.logger.info(response)
        #generator = response.json()['d0']
        
-       return render_template('home.html', random_letter=random_letter, random_number=random_number, service4=service4)
+       return render_template('home.html', random_letter=random_letter, random_number=random_number, generator=generator)
 
    # return render_template('home.html', title= 'Dare', form=form, generator=generator)
 
