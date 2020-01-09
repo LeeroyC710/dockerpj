@@ -8,11 +8,10 @@ import string
 #-------------- random number generator function------------------------------
 @app.route('/', methods=['POST'])
 def random_number():
-    test = {"number":"none"}
+    letsgo = {"number":"none"}
     chance = random.randint(0,3)
-    test['number'] = chance
-    return test
+    letsgo['number'] = chance
+    return letsgo
 
 if __name__ == '__main__':
     app.run (host='0.0.0.0', port=5001) 
-
