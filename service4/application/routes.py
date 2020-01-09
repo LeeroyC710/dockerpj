@@ -34,9 +34,9 @@ def generator():
     form = DareForm()
     generator=""
 
-    if form.is_submitted():
+    if form.submit.data:
         
-       response = requests.post("http://service3:5003")
+       response = requests.post("http://service3:5003").json()["d0"]
        if generator.ok: 
            random_letter=generator.json()["random_letter"]
            random_number=generator.json()["random_number"]
