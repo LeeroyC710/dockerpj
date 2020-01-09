@@ -3,13 +3,14 @@ import sys
 import requests
 import random
 import string
-app = Flask(__name__)
+from application import app
 
 @app.route('/', methods=['GET','POST'])
 def random_letter():
+    test = {"letter":"none"}
     random_letter = random.choice(string.ascii_letters[0:4])
-    
-    return random_letter
+    test['letter'] = random_letter
+    return test
 
 if __name__ == '__main__':
      app.run(host='0.0.0.0', port=9019)

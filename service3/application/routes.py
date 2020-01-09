@@ -7,8 +7,9 @@ from application import app
 
 @app.route('/', methods=['GET', 'POST'])
 def dare_generator():
-    random_number = requests.post('http://service1:5001').text
-    random_letter = requests.post('http://service2:5002').text
+    if request.methods == 'POST':
+        random_number = requests.post('http://service1:5001').json()
+        random_letter = requests.post('http://service2:5002').json()
 
     if random_number.text=='0' and random_letter.text=='A': 
         return {"d0":"Number: 0, Letter: A, Dare: You have to avoid calling people by names for 5mins"} 
