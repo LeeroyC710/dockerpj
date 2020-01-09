@@ -1,11 +1,12 @@
 from flask import Flask, jsonify, make_response
+from application import app
 import sys
 import requests
 import random
 import string
 
 #-------------- random number generator function------------------------------
-@app.route('/', methods=[ 'POST'])
+@app.route('/', methods=['POST'])
 def random_number():
     chance = random.randint(0,3)
 
