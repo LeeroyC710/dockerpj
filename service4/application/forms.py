@@ -5,8 +5,14 @@ from application.models import User, Dare
 from flask_login import LoginManager, current_user
 from application import login_manager, db
 
+#-------------------------dare submit button-------------------------------
+class SubmitForm(FlaskForm):
+
+
+    submit = SubmitField('lets Go!')
+
 #-------------------------login form----------------------------------------
-class LoginForm(FlaskForm):
+'''class LoginForm(FlaskForm):
         email = StringField('Email',
                 validators=[
                         DataRequired(),
@@ -21,11 +27,11 @@ class LoginForm(FlaskForm):
         )
 
         remember = BooleanField('Remember Me')
-        submit = SubmitField('Login')
+        submit = SubmitField('Login')'''
 
 #--------------registration form------------------------------------------
 
-class RegistrationForm(FlaskForm):
+'''class RegistrationForm(FlaskForm):
 	first_name = StringField('First Name',
 		validators=[
 			DataRequired(),
@@ -55,4 +61,4 @@ class RegistrationForm(FlaskForm):
 	def validate_email(self, email):
 		user = User.query.filter_by(email=email.data).first()
 		if user:
-			raise ValidationError('Email already in use!')
+			raise ValidationError('Email already in use!')'''

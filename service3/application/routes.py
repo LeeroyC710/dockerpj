@@ -35,5 +35,5 @@ def dare_generator():
     elif random_number.text=='2' and random_letter.text=='D': 
         return {"y0":"Number: 2, Letter: D, Dare: Have an arm-wrestling with the person sitting next to you!"}
 
-if __name__=='__main__':
-    app.run(debug=True, host='0.0.0.0', port=5003)
+#if __name__=='__main__':
+   # app.run(debug=True, host='0.0.0.0', port=5003)
