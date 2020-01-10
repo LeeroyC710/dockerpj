@@ -4,7 +4,7 @@ cffi==1.13.2
 chardet==3.0.4
 Click==7.0
 crcmod==1.7
-cryptography==2.3
+cryptography==2.8
 enum34==1.1.6
 Flask==1.1.1
 Flask-Login==0.4.1
@@ -16,7 +16,6 @@ Jinja2==2.10.3
 keyring==10.6.0
 keyrings.alt==3.0
 MarkupSafe==1.1.1
-
 pycparser==2.19
 requests==2.22.0
 SecretStorage==2.3.1

@@ -32,24 +32,16 @@ def route_users():
 def generator():
 
     form = DareForm()
-    generator=""
+    payload={'':''}
 
-    if form.submit.data:
+    if form.is_submitted():
         
-       response = requests.post("http://127.0.0.1:5003/").json()
-       return response
-       if generator.ok: 
-           random_letter=generator.json()["random_letter"]
-           random_number=generator.json()["random_number"]
-           generator=generator.json()["d0"]
-      
-       #app.logger.info("***************************************")
-       #app.logger.info(response)
-       #generator = response.json()['d0']
-       
-       return render_template('home.html', random_letter=random_letter, random_number=random_number, generator=generator)
-
-   # return render_template('home.html', title= 'Dare', form=form, generator=generator)
+       response = requests.post("http://service3:5003/").json()
+       return render_template('home.html', form=form, data=response)
+   
+    if request.method=='GET':
+       #response = requests.get("http://service3:5003/").json() 
+       return render_template('home.html', title= 'Dare', form=form)
 
 
 #--------------this will help debugging whilst developing 

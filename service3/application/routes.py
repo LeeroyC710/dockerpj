@@ -5,12 +5,15 @@ import string
 import random
 from application import app
 
+
+#----------------------------------------connections from service1 and service2 configurations-------------------------
+
 @app.route('/', methods=['GET', 'POST'])
 def dare_generator():
     if request.method == 'POST':
         data = {"number":"none", "letter":"none"}
-        random_number = requests.post('http://127.0.0.1:5001').json() #remember to change to the ipaddress to service etc
-        random_letter = requests.post('http://127.0.0.1:5002').json()
+        random_number = requests.post('http://service1:5001').json() 
+        random_letter = requests.post('http://service2:5002').json()
         data['number'] = random_number['number']
         data['letter'] = random_letter['letter']
         
