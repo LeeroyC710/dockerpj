@@ -3,7 +3,7 @@ from flask import abort, url_for
 from flask_testing import TestCase
 from os import getenv
 from application import app, db
-from application.models import User, Event
+from application.models import User, Dare
 
 
 class TestBase(TestCase):
@@ -27,7 +27,7 @@ class TestBase(TestCase):
         db.create_all()
 
         # create test admin usersou
-        admin = User(first_name="admin", last_name="admin", email="admin@admin.com", password="admin2016")
+        admin = user(user_name="admin", email ="admin", dare="admin@admin.com")
 
         # create test non-admin user
         employee = User(first_name="test", last_name="user", email="test@user.com", password="test2016")
@@ -51,27 +51,6 @@ class ViewTest(TestBase):
         response =self.client.get(url_for('home'))
         self.assertEqual(response.status_code, 200)
  
-    def test_aboutpage_view(self):
-        response =self.client.get(url_for('about'))
-        self.assertEqual(response.status_code, 200)
-
-    def test_registerpage_view(self):
-        response =self.client.get(url_for('register'))
-        self.assertEqual(response.status_code, 200)
-    
-    def test_eventpage_view(self):
-        response =self.client.get(url_for('event'))
-        self.assertEqual(response.status_code, 302)
-    #the test below should give an output of code 302 since user can't access account
-    #unless they are logged-in
-    def test_accountpage_view(self):
-        response =self.client.get(url_for('account'))
-        self.assertEqual(response.status_code, 302)
-
-    def test_loginpage_view(self):
-        response =self.client.get(url_for('login'))
-        self.assertEqual(response.status_code, 200)
-
 
 class ModelTest(TestBase):
     def test_user_model(self):
