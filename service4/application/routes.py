@@ -36,7 +36,8 @@ def generator():
 
     if form.submit.data:
         
-       response = requests.post("http://service3:5003").json()["d0"]
+       response = requests.post("http://127.0.0.1:5003/").json()
+       return response
        if generator.ok: 
            random_letter=generator.json()["random_letter"]
            random_number=generator.json()["random_number"]

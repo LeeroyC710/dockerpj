@@ -9,11 +9,11 @@ from application import app
 def dare_generator():
     if request.method == 'POST':
         data = {"number":"none", "letter":"none"}
-        random_number = requests.post('http://127.0.0.1:5001').json()
+        random_number = requests.post('http://127.0.0.1:5001').json() #remember to change to the ipaddress to service etc
         random_letter = requests.post('http://127.0.0.1:5002').json()
         data['number'] = random_number['number']
         data['letter'] = random_letter['letter']
-        print(data, "0")
+        
         #return data 
     #random_number['number']
 
