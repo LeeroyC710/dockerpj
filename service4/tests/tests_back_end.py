@@ -3,7 +3,7 @@ from flask import abort, url_for
 from flask_testing import TestCase
 from os import getenv
 from application import app, db
-from application.models import User, Dare
+from application.models import user, dare
 
 
 class TestBase(TestCase):

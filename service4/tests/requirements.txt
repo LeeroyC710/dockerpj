@@ -7,7 +7,6 @@ cryptography==2.1.4
 enum34==1.1.6
 Flask==1.1.1
 Flask-SQLAlchemy==2.4.1
-flask-testing-0.7.1
 Flask-WTF==0.14.2
 idna==2.8
 ipaddress==1.0.17
@@ -17,6 +16,7 @@ keyring==10.6.0
 keyrings.alt==3.0
 MarkupSafe==1.1.1
 pycrypto==2.6.1
+pygobject==3.26.1
 pyxdg==0.25
 requests==2.22.0
 SecretStorage==2.3.1
