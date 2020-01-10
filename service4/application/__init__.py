@@ -8,7 +8,7 @@ app=Flask(__name__)
 
 app.config['SQLALCHEMY_DATABASE_URI']=('mysql+pymysql://' + str(getenv('MYSQL_USER')) + ':' + str(getenv('MYSQL_PASSWORD')) + '@' + str(getenv('MYSQL_IP')) + '/' + str(getenv('MYSQL_DB')))
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-app.config['SECRET_KEY'] = getenv('SECRET_KEY')
+app.config['SECRET_KEY']=getenv('SECRET_KEY')
 db = SQLAlchemy(app)
 '''
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:5555@35.246.46.229/dockerproject'

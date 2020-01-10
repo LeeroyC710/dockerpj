@@ -31,15 +31,15 @@ services:
         - SECRET_KEY=${SECRET_KEY} 
     service1:
        build:
-        context: ./service1
+        context: ./service1/
         dockerfile: ../Dockerfile
     service2: 
        build: 
-        context: ./service2
+        context: ./service2/
         dockerfile: ../Dockerfile
     service3: 
        build:
-        context: ./service3
+        context: ./service3/
         dockerfile: ../Dockerfile
 
 

@@ -4,27 +4,17 @@
         <head>
                 <h1> DarePhase </h1>
         </head>
-	<style>
-        input[type=button], input[type=submit], input[type=reset] {
-        background-color: #90EE90;
-        border: none;
-        color: white;
-        padding: 16px 32px;
-        text-decoration: none;
-        margin: 4px 2px;
-        cursor: pointer;
-}
-</style>
         <body>
                 <div class="form">
                 <form method="POST" action="">
                         <div class="form-group">
                                 {{ form.submit }}
-                                <p>  {{ data.d0 }} </p>
+                                <p>  {{ data.0 }} </p>
                                 <p><i> Playing {{ user_name }} <i><p>
                         </div>
                 </form>
                 </div>
         </body>
 {% endblock body_content %}
-</html>                              
+</html>
+~                              
