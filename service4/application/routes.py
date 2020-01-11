@@ -5,6 +5,7 @@ from application.forms import DareForm, SubmitField
 from flask_login import current_user
 import requests, json
 
+#------------------       Main_Service Handling Service3             --------------------------
 
 @app.route('/', methods=['GET','POST'])
 def generator():
