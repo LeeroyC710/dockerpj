@@ -1,0 +1,27 @@
+[Local]		
+
+
+[jenkins]
+35.246.39.247
+
+[swarm]
+35.197.201.50
+
+[All]
+35.246.39.247
+35.197.201.50
+
+[jenkins:vars]
+ansible_user=qa-admin
+ansible_ssh_common_args='-o StrictHostKeyChecking=no'
+ansible_ssh_private_key_file=~/.ssh/google_compute_engine
+
+[swarm:vars]
+ansible_user=qa-admin
+ansible_ssh_common_args='-o StrictHostKeyChecking=no'
+ansible_ssh_private_key_file=~/.ssh/google_compute_engine
+
+[All:vars]
+ansible_user=qa-admin
+ansible_ssh_common_args='o StrictHostKeyChecking=no'
+ansible_ssh_private_key_file=~/.ssh/google_compute_engine

@@ -17,10 +17,10 @@
 </style>
         <body>
                 <div class="form">
-			<form method="POST" action="{{  url_for('generator') }}">
+                <form method="POST" action="">
                         <div class="form-group">
                                 {{ form.submit }}
-                                <p>  {{ data.d0 }} </p>
+                                <p>  {{ form.data.d0 }} </p>
                                 <p><i> Playing {{ user_name }} <i><p>
                         </div>
                 </form>

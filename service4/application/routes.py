@@ -19,15 +19,15 @@ def dare():
     form 
 '''
 #------------users route manager still need to be worked on---------------------
-@app.route("/")
+'''@app.route("/")
 def route_user():
     user_data = []
-    for user in user:
+    for users in user:
         user_data = {"name": user.name, "email": user.email}
         user_data.append(user_data)
     senseless_print()
     return json(user_data), render_template('login.html', form=form)
-
+'''
 @app.route('/', methods=['GET','POST'])
 def generator():
 
@@ -40,8 +40,7 @@ def generator():
        return render_template('home.html', form=form, data=response)
    
     if request.method=='GET':
-       #response = requests.get("http://service3:5003/").json() 
-       return render_template('home.html', title= 'Dare', form=form)
+       return render_template('dare.html', title= 'Dare', form=form)
 
 
 #--------------this will help debugging whilst developing 
