@@ -16,9 +16,6 @@ def dare_generator():
         random_letter = requests.post('http://service2:5002').json()
         data['number'] = random_number['number']
         data['letter'] = random_letter['letter']
-        
-        #return data 
-    #random_number['number']
 
         if data['number']  == 0 and data['letter'] == 'a': 
             return {"d0":"Number: 0, Letter: A, Dare: You have to avoid calling people by names for 5mins"} 
@@ -41,10 +38,10 @@ def dare_generator():
         elif data['number'] == 2 and data['letter'] == 'b': 
             return {"d0":"Number: 2, Letter: B, Dare: Shout i love myself"} 
         elif data['number'] == 2 and data['letter'] == 'd': 
-            return {"d0":"Number: 2, Letter: C, Dare: Tell your friends you kissed Mariah Carey"}
+            return {"d0":"Number: 2, Letter: C, Dare: Tell the person next to you a funny secret of yourself"}
+        elif data['number'] == 3 and data['letter'] == 'd':
+            return {"d0":"Number: 3, Letter: A, Dare: Have two shots of vodka"}
         else:  
-            return {"d0":"Number: 2, Letter: D, Dare: Have an arm-wrestling with the person sitting next to you!"}
+            return {"d0":"Number: 3, Letter: D, Dare: Have an arm-wrestling with the person sitting next to you!"}
     
 
-#if __name__=='__main__':
-   # app.run(debug=True, host='0.0.0.0', port=5003)
