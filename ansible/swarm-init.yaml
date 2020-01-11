@@ -9,16 +9,16 @@
   - name: install docker sdk
     pip:
       name: docker
-  - name: Clone DwarvenGenerator
+  - name: Clone dockerpj
     git:
-      repo: 'https://github.com/TomLLew/DwarvenGenerator.git'
-      dest: /home/jenkins/DwarvenGenerator         
+      repo: 'https://github.com/LeeroyC710/dockerpj'
+      dest: /home/jenkins/dockerpj         
   - name: swarm init
     docker_swarm:
       state: present
   - name: building images
     docker_compose:
-      project_src: /home/jenkins/DwarvenGenerator
+      project_src: /home/jenkins/dockerpj
       build: true
     remote_user: jenkins
   - name: Deploy the stack
@@ -26,4 +26,4 @@
       state: present
       name: DwarvenGenerator
       compose:
-      - /home/jenkins/DwarvenGenerator/docker-compose.yaml
+      - /home/jenkins/dockerpj/docker-compose.yaml
