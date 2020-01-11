@@ -1,0 +1,30 @@
+---
+- hosts: jenkins
+  become: true
+  tasks:
+  - name: make jenkins user
+    user: 
+      name: jenkins
+      shell: /bin/bash 
+  - name: install open jdk  
+    apt:
+      name: openjdk-8-jdk
+      state: latest
+  - name: GPG key
+    apt_key:
+      url: "https://pkg.jenkins.io/debian/jenkins.io.key"
+      state: present
+  - name: jenkins apt repo
+    apt_repository:
+      repo: "deb http://pkg.jenkins.io/debian-stable binary/"
+      state: present
+      update_cache: true
+  - name: jenkins install
+    apt:
+      name: jenkins
+      state: latest
+      update_cache: true
+  - name: jenkins service start
+    service:
+      name: jenkins
+      state: started

@@ -1,0 +1,10 @@
+- hosts: All
+  become: true
+  tasks:
+  - name: daemon.json
+    copy: 
+      src: ../daemon.json
+      dest: /etc/docker/daemon.json
+      owner: jenkins
+      group: jenkins
+      mode: u=rw,g=rw,o=

@@ -1,0 +1,17 @@
+- hosts: jenkins
+  become: true
+  tasks:
+  - name: jenkins ssh folder
+    file:
+      path: /home/jenkins/.ssh
+      state: directory
+      mode: "0700"
+      owner: jenkins
+      group: jenkins
+  - name: install private key
+    copy:
+      src: ~/.ssh/ansible_id_rsa
+      dest: /home/jenkins/.ssh/id_rsa
+      owner: jenkins
+      group: jenkins
+      mode: u=rw,g=,o=

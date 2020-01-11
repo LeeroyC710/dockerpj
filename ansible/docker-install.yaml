@@ -1,0 +1,51 @@
+- hosts: All
+  become: true
+  tasks:
+  - name: docker-prerequisites
+    apt:
+      pkg:
+      - apt-transport-https   
+      - ca-certificates
+      - curl
+      - gnupg2
+      - software-properties-common
+      - python3-pip
+      - python-pip
+      - git
+      state: latest
+      update_cache: true
+  - name: docker
+    pip:
+      name: docker
+  - name: json
+    pip:
+      name: jsondiff
+  - name: yaml
+    pip:
+      name: pyyaml
+  - name: compose
+    pip:
+      name: docker-compose   
+  - name: Docker GPG key
+    apt_key: 
+      url: "https://download.docker.com/linux/ubuntu/gpg"
+      state: present
+  - name: Docker repository
+    apt_repository:
+      repo: "deb [arch=amd64] https://download.docker.com/linux/debian stretch stable"
+      state: present
+      update_cache: true
+  - name: Docker install
+    apt:
+      pkg:
+      - docker-ce
+      - docker-ce-cli
+      - containerd.io
+      state: latest
+      update_cache: true
+  - name: docker service
+    service:
+      name: docker
+      state: started   
+  - name: docker group
+    shell: usermod -aG docker jenkins

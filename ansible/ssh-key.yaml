@@ -1,0 +1,8 @@
+---
+
+- hosts: localhost
+  connection: local
+  tasks:
+  - name: make ssh key pair
+    openssh_keypair:
+      path: ~/.ssh/ansible_id_rsa

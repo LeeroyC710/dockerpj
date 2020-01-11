@@ -1,0 +1,29 @@
+- hosts: swarm
+  become: true
+  tasks:
+  - name: python-pip install
+    apt:
+      name: python-pip
+      state: present
+      update_cache: true
+  - name: install docker sdk
+    pip:
+      name: docker
+  - name: Clone DwarvenGenerator
+    git:
+      repo: 'https://github.com/TomLLew/DwarvenGenerator.git'
+      dest: /home/jenkins/DwarvenGenerator         
+  - name: swarm init
+    docker_swarm:
+      state: present
+  - name: building images
+    docker_compose:
+      project_src: /home/jenkins/DwarvenGenerator
+      build: true
+    remote_user: jenkins
+  - name: Deploy the stack
+    docker_stack:
+      state: present
+      name: DwarvenGenerator
+      compose:
+      - /home/jenkins/DwarvenGenerator/docker-compose.yaml

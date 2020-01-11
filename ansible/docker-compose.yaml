@@ -1,0 +1,5 @@
+- hosts: jenkins
+  become: true
+  tasks:
+  - name: install docker compose
+    shell: curl https://raw.githubusercontent.com/TomLLew/Scripts/master/Docker-Install-Script.sh | sudo bash

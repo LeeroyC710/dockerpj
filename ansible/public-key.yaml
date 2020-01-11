@@ -1,0 +1,17 @@
+- hosts: swarm
+  become: true
+  tasks:
+  - name: make swarm ssh folder
+    file:
+      path: /home/jenkins/.ssh
+      state: directory
+      mode: "0700"
+      owner: jenkins
+      group: jenkins
+  - name: install public key
+    copy:
+      src: ~/.ssh/ansible_id_rsa.pub
+      dest: /home/jenkins/.ssh/authorized_keys
+      owner: jenkins
+      group: jenkins
+      mode: u=rw,g=,o=

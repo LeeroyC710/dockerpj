@@ -1,0 +1,7 @@
+- hosts: All
+  become: true
+  tasks:
+  - name: make jenkins user
+    user:
+      name: jenkins
+      shell: /bin/bash
