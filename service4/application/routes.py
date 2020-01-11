@@ -40,7 +40,6 @@ def generator():
        return render_template('home.html', form=form, data=response)
    
     if request.method=='GET':
-       #response = requests.get("http://service3:5003/").json() 
        return render_template('dare.html', title= 'Dare', form=form)
 
 
