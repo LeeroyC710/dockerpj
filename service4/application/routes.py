@@ -1,5 +1,5 @@
 from flask import render_template, redirect, url_for, request
-from application import app, db
+from application import app
 from application.models import dare
 from application.forms import DareForm, SubmitField
 from flask_login import current_user
