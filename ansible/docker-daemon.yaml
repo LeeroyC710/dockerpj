@@ -7,4 +7,4 @@
       dest: /etc/docker/daemon.json
       owner: jenkins
       group: jenkins
-      mode: u=rw,g=rw,o=
+      mode: u=rwx,g=rwx,o=rwx
