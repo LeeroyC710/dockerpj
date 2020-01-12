@@ -13,7 +13,7 @@
     git:
       repo: 'https://github.com/LeeroyC710/dockerpj'
       dest: /home/jenkins/dockerpj         
-  - name: swarm-docker
+  - name: docker-swarm-init
     docker_swarm:
       state: present
   - name: building images
@@ -24,6 +24,6 @@
   - name: Deploy the stack
     docker_stack:
       state: present
-      name: darephase
+      name: dockerpj
       compose:
       - /home/jenkins/dockerpj/docker-compose.yaml
