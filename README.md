@@ -7,13 +7,13 @@ To create a service application that depends on three other services to function
 
 *[Risk Assessment](#risk assessment)
 
-*[Error Logs](#error Logs)
+*[Error Logs](#errorLogs)
 
 *[Solution](#solution)
 
-*[Delivered Solution](#delivered solution)
+*[Delivered Solution](#deliveredsolution)
 
-*[Service Architecture](#Service Architecture)
+*[Service Architecture](#service architecture)
 
 *[Technology Used](#report)
 
