@@ -13,7 +13,7 @@
     git:
       repo: 'https://github.com/LeeroyC710/dockerpj'
       dest: /home/jenkins/dockerpj         
-  - name: swarm init
+  - name: swarm-docker
     docker_swarm:
       state: present
   - name: building images
