@@ -31,11 +31,19 @@ The project name: Darephase - through its development it was designed to allow u
 Before this project started I used trello to plan out on the direction of the project and also kept all logs updated whether it was errors and fixes made within the application itself. I also had to carry out extensive research on some topics i didn't quite understand in-order to meet the requirements of the services. Generated a few ideas from the start and started looking at the ones that were potentially approachable based on the topics covered during my training weeks. I also started doing a risk assessment of the project as i started building the application. 
 ![alt text](https://github.com/LeeroyC710/dockerpj/blob/master/documentation/riskassessment.png)
 
+<a name="errorlogs"></a>
+## Error Logs
+During the development stage and deployment stage there was some errors that would pop-up whilst attempting to build the app on docker compose and sometimes whilst running jenkins, some of these were easy fixes and some required some research in-house and also online in-order to resolve these without breaking more functions on the application. I used the error log to record these problems and noted some quick fixes that can still applied for future use in later development stages. 
+
+Have a look at the error logs to see some of the errors that popped up. 
+![alt text](https://github.com/LeeroyC710/dockerpj/blob/master/documentation/Errorlogs.png)
+
 <a name="solution"></a>
 ## Solution
 ![alt text](https://github.com/LeeroyC710/dockerpj/blob/master/documentation/deliveredsolution.png)
-The project name: Darephase - through its development it was designed to allow users to have access to a mini-game. The idea its
+The project name: Darephase - through its development it was designed to allow users to have access to a mini-game.
 The app itself is running on the MVP but however it is currently using 4 images (services) in order for it to function to its purpose. The app has been tested whilst being developed for example some services connections and outputs, Postman was used to check if each service was giving out the right output. 
+
 
 <a name="Delivered solution"></a>
 ## Delievered Solution 
