@@ -6,9 +6,11 @@ To create a service application that depends on three other services to function
 *[Brief](#brief)
 
 *[Solution](#solution)
+
 *[Delivered Solution](#delivered solution)
 
-*[Testing](#testing)
+*[Service Architecture](#Service Architecture)
+
 *[Report](#report)
 
 *[Deployment](#Deployment)
@@ -21,15 +23,22 @@ To create a service application that depends on three other services to function
 The project name: Darephase - through its development it was designed to allow users to have access to a mini-game. The idea itself was generated from house games with friends and family and designed for fun. This project was built on docker container images and it runs on python langauage as the majority. 
 
 <a name="solution"></a>
-### Solution
+## Solution
 ![alt text](https://github.com/LeeroyC710/dockerpj/blob/master/documentation/deliveredsolution.png)
 The project name: Darephase - through its development it was designed to allow users to have access to a mini-game. The idea its
-The app itself is running on the MVP but however it is currently using 4 images (services) in order for it to function to its purpose. The app has been tested whilst being developed for example some services connections and outputs, Postman was used to check if each service was giving out the right output.  
-###Delievered Solution 
-![alt text](https://github.com/LeeroyC710/dockerpj/blob/master/documentation/DarePhase.png)
-The ER diagrams show a relation between the two tables, although this is functional the user is able to navigate between the account page, events and home page. The user_id is also foreignkey in the event table as it triggers the creation and of events in the table, users are not able to use this feature unless they log in or are registered. 
+The app itself is running on the MVP but however it is currently using 4 images (services) in order for it to function to its purpose. The app has been tested whilst being developed for example some services connections and outputs, Postman was used to check if each service was giving out the right output. 
 
-<a name="mla"></a>
+<a name="Delivered solution"></a>
+## Delievered Solution 
+![alt text](https://github.com/LeeroyC710/dockerpj/blob/master/documentation/DarePhase.png)
+To produce this solution i had to use tools that go hand to hand with each stage of the development stage. The solution is based on flask-app service with 3 services working with the frontend which is service4 in this case.  
+
+<a name="service architecture"></a>
 ### Service Architecture
 Please check the service architecture in the documentation
 ![alt text](https://github.com/LeeroyC710/dockerpj/blob/master/documentation/ServiceArchitecture.png)
+
+<a name="Technology used"></a>
+### Technology Used
+Here's a set of tools used for the project to come to a successful development: 
+https://github.com/LeeroyC710/dockerpj/blob/master/documentation/TechnologyUsed.png
