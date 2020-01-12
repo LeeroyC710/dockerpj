@@ -5,7 +5,7 @@ To create a service application that depends on three other services to function
  
 *[Brief](#brief)
 
-*[Risk Assessment](#risk assessment)
+*[Risk Assessment](#riskassessment)
 
 *[Error Logs](#errorLogs)
 
@@ -13,7 +13,7 @@ To create a service application that depends on three other services to function
 
 *[Delivered Solution](#deliveredsolution)
 
-*[Service Architecture](#service architecture)
+*[Service Architecture](#servicearchitecture)
 
 *[Technology Used](#report)
 
