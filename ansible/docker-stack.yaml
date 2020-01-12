@@ -1,0 +1,18 @@
+- hosts: swarm
+  become: true
+  tasks:
+  - name: python-pip install
+    apt:
+      name: python-pip
+      state: present
+      update_cache: true
+  - name: install docker sdk
+    pip:
+      name: docker
+  - name: Clone dockerpj
+    git:
+      repo: 'https://github.com/LeeroyC710/dockerpj'
+      dest: /home/jenkins/dockerpj         
+  - name: docker-swarm-init
+    docker_swarm:
+      state: present
