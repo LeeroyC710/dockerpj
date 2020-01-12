@@ -11,7 +11,7 @@ def generator():
     form = DareForm()
     payload={'':''}
 
-    if form.is_submitted():
+    if request.method =='POST':
         
        response = requests.post("http://service3:5003/").json()
        return render_template('home.html', form=form, data=response)
