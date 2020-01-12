@@ -24,6 +24,6 @@
   - name: Deploy the stack
     docker_stack:
       state: present
-      name: DwarvenGenerator
+      name: darephase
       compose:
       - /home/jenkins/dockerpj/docker-compose.yaml
