@@ -13,23 +13,22 @@ services:
           target: /etc/nginx/nginx.conf
 
     app:
-      image: flask:latest
-      build: 
+       image: jenkins-vm:5000/app:build-0
+       build: 
         context: ./service4
         dockerfile: ../Dockerfile
-      ports:
-        - target: 5000
-          published: 5000
-          protocol: tcp
     service1:  
+       image: jenkins-vm:5000/service1:build-0
        build:
         context: ./service1/
         dockerfile: ../Dockerfile
     service2: 
+       image: jenkins-vm:5000/service2:build-0
        build: 
         context: ./service2/
         dockerfile: ../Dockerfile
     service3: 
+       image: jenkins-vm:5000/service3:build-0
        build:
         context: ./service3/
         dockerfile: ../Dockerfile
