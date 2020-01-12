@@ -20,6 +20,10 @@
     docker_compose:
       project_src: /home/jenkins/dockerpj
       build: true
+  - name: docker-compose down
+    shell: | 
+      cd/home/jenkins/dockerpj/
+      docker-compose down
     remote_user: jenkins
   - name: Deploy the stack
     docker_stack:
