@@ -11,9 +11,11 @@ To create a service application that depends on three other services to function
 
 *[Solution](#solution)
 
-*[Delivered Solution](#deliveredsolution)(#http://35.242.175.227/)
+*[Delivered Solution](#deliveredsolution)(http://35.242.175.227/)
 
 *[Service Architecture](#servicearchitecture)
+
+*[Service Installation](#serviceinstallation)
 
 *[Technology Used](#report)
 
@@ -56,6 +58,30 @@ To produce this solution i had to use tools that go hand to hand with each stage
 Please check the service architecture in the documentation
 ![alt text](https://github.com/LeeroyC710/dockerpj/blob/master/documentation/ServiceArchitecture.png)
 
+<a name="service installation"></a>
+## Service Installation
+- Open a new VM GCP 
+- Then open two other vms naming one jenkins and one swarm 
+- You then want to SSH $ 'ssh-keygen' command to produce the public-key
+- Once you have generated the Key you want to $ cat /home/location/id_rsa.pub to get the public
+- Copy and paste it into jenkins and swarm athorized_keys file - to begin the connection process
+- Git clone repo: https://github.com/LeeroyC710/dockerpj
+- sudo apt install python 3.1.7
+- sudo apt install python3 pip -y
+- sudo apt install python3
+- Install ansible
+- mkdir -p ~/.local/bin
+- echo 'PATH=$PATH:~/.local/bin' >> ~/.bashrc
+- source ~/.bashrc
+- ## install ansible with pip
+- pip install --user ansible
+- # check that ansible has been installed
+- ansible --version
+- cd dockerpj/ansible 
+- vim inventory change Both Jenkins-VM and Swarm-VM IP to your Jenkins-VM IP and Swarm-VM then save file
+- $ ansible-playbook -i inventory _all.yaml 
+- Now Go to your swarm-vm IP and add / or add port 80 to see the running application. 
+
 <a name="Technology used"></a>
 ### Technology Used
 Here's a set of tools used for the project to come to a successful development: 
@@ -67,6 +93,16 @@ Here's a set of tools used for the project to come to a successful development:
 For the future built of this service I should make sure I allow enough time for more research on bug fixes and also ways to improve the service itself without any interruptions to the userability of the application service. That means enabling jenkins to auto-mate the full built of the full stack application allow replicas to act as clones whilst changes happen in the background. Below is a CI Pipeline of the improved process of the application as a service using Jenkins. 
 ![alt text](https://github.com/LeeroyC710/dockerpj/blob/master/documentation/JenkinsCIPipeline.png)
 
+<a name="auth"></a>
+## Authors
+
+Leeroy Chiweshe
+
+<a name="ack"></a>
+## Acknowledgements
+
+* The rest of the cohorts on the programme
+* QA Consulting team and instructors for providing key skills to complete this project. 
 
 
 
