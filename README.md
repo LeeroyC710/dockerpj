@@ -20,8 +20,6 @@ To create a service application that depends on three other services to function
 
 * [Technology Used](#technologyused)
 
-* [Deployment](#Deployment)
-
 * [Improvements for the future](#improve)
 
 * [Authors](#authors)
