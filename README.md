@@ -3,29 +3,30 @@ To create a service application that depends on three other services to function
 
 #### [Presentation](https://docs.google.com/presentation/d/1sSAeM0Jy_vNnw6RrfvDNmUF_LZkfKvl041Kc1tFScps/edit?usp=sharing)
  
-#### [Brief](#brief)
+#### Contents 
+* [Brief](#brief)
 
-#### [Risk Assessment](#riskassessment)
+* [Risk Assessment](#riskassessment)
 
-#### [Error Logs](#errorLogs)
+* [Error Logs](#errorLogs)
 
-#### [Solution](#solution)
+* [Solution](#solution)
 
-#### [Delivered Solution](#deliveredsolution)(http://35.242.175.227/)
+* [Delivered Solution](#deliveredsolution)(http://35.242.175.227/)
 
-#### [Service Architecture](#servicearchitecture)
+* [Service Architecture](#servicearchitecture)
 
-#### [Service Installation](#serviceinstallation)
+* [Service Installation](#serviceinstallation)
 
-#### [Technology Used](#report)
+* [Technology Used](#technologyused)
 
-#### [Deployment](#Deployment)
+* [Deployment](#Deployment)
 
-#### [Improvements for the future](#improve)
+* [Improvements for the future](#improve)
 
-#### [Authors](#authors)
+* [Authors](#authors)
 
-#### [Acknowledge](#acknowledge)
+* [Acknowledge](#acknowledge)
 
 <a name="brief"></a>
 ## Project Brief
