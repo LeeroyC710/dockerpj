@@ -11,7 +11,7 @@ To create a service application that depends on three other services to function
 
 *[Solution](#solution)
 
-*[Delivered Solution](#deliveredsolution)(http://35.242.175.227/)
+*[Delivered Solution](#deliveredsolution)(#http://35.242.175.227/)
 
 *[Service Architecture](#servicearchitecture)
 
@@ -60,10 +60,13 @@ Please check the service architecture in the documentation
 ### Technology Used
 Here's a set of tools used for the project to come to a successful development: 
 ![alt text](https://github.com/LeeroyC710/dockerpj/blob/master/documentation/TechnologyUsed.png)
+![alt text](https://github.com/LeeroyC710/dockerpj/blob/master/documentation/vm-layout.png)
 
 <a name="Improvements for the future"></a>
 ### Improvements for the future
 For the future built of this service I should make sure I allow enough time for more research on bug fixes and also ways to improve the service itself without any interruptions to the userability of the application service. That means enabling jenkins to auto-mate the full built of the full stack application allow replicas to act as clones whilst changes happen in the background. Below is a CI Pipeline of the improved process of the application as a service using Jenkins. 
 ![alt text](https://github.com/LeeroyC710/dockerpj/blob/master/documentation/JenkinsCIPipeline.png)
+
+
 
 
