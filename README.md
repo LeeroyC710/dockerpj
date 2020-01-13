@@ -25,6 +25,7 @@ To create a service application that depends on three other services to function
 ## Project Brief
 To create a service application that depends on three other services to function properly. In this case for this project created a service app that generates a random number and random letter and joins the two together to generate a random sentence (dare) in service3 pushing this feature on to the main service (service4).
 The project name: Darephase - through its development it was designed to allow users to have access to a mini-game. The idea itself was generated from house games with friends and family and designed for fun. This project was built on docker container images and it runs on python langauage as the majority. 
+![alt text](https://github.com/LeeroyC710/dockerpj/blob/master/documentation/Trello.png)
 
 <a name="risk assessment"></a>
 ## Risk Assessment
