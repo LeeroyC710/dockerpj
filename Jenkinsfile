@@ -6,7 +6,7 @@ pipeline{
 		
         	stage('--docker-compose build and push--'){
 			steps{
-                    		sh '''ssh -t jenkins@docker-jenkins  << leeroy
+                    		sh '''ssh -t jenkins@swarm-vm  << EOF
                            	cd dockerpj/
                            	docker-compose up -d --build
                            	docker-compose down 
@@ -18,7 +18,7 @@ pipeline{
         	}
         	stage('--Deploy services--'){
 			steps{
-				sh '''ssh -t jenkins@docker-jenkins  << leeroy
+				sh '''ssh -t jenkins@swarm-vm  << EOF
                        		cd dockerpj/
                        		docker stack deploy docker-compose.yaml  
 				
