@@ -5,23 +5,27 @@ To create a service application that depends on three other services to function
  
 ### [Brief](#brief)
 
-### [Risk Assessment](#riskassessment)
+## [Risk Assessment](#riskassessment)
 
-### [Error Logs](#errorLogs)
+## [Error Logs](#errorLogs)
 
-### [Solution](#solution)
+## [Solution](#solution)
 
-### [Delivered Solution](#deliveredsolution)(http://35.242.175.227/)
+## [Delivered Solution](#deliveredsolution)(http://35.242.175.227/)
 
-### [Service Architecture](#servicearchitecture)
+## [Service Architecture](#servicearchitecture)
 
-### [Service Installation](#serviceinstallation)
+## [Service Installation](#serviceinstallation)
 
-### [Technology Used](#report)
+## [Technology Used](#report)
 
-### [Deployment](#Deployment)
+## [Deployment](#Deployment)
 
-### [Improvements for the future](#improve)
+## [Improvements for the future](#improve)
+
+## [Authors](#authors)
+
+## [Acknowledge](#acknowledge)
 
 <a name="brief"></a>
 ## Project Brief
