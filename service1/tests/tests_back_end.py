@@ -2,4 +2,4 @@ import pytest
 from application.routes import random_number
 
 def test_randnum():
-    assert random_number == 2
+    assert type(random_number()) == dict
