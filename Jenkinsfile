@@ -1,29 +1,15 @@
-pipeline{
-	agent any
-
-	stages{
-		
-		
-        	stage('--docker-compose build and push--'){
-			steps{
-                    		sh '''ssh -t jenkins@docker-jenkins  << leeroy
-                           	cd dockerpj/
-                           	docker-compose up -d --build
-                           	docker-compose down 
-                           	docker-compose push
+ls
+pwd
+$(whoami)
+docker --version
+docker-comopse --version
+docker-compose build
+docker-compose push
 				
-                           	'''
-            
-            		}
-        	}
-        	stage('--Deploy services--'){
-			steps{
-				sh '''ssh -t jenkins@docker-jenkins  << leeroy
-                       		cd dockerpj/
-                       		docker stack deploy docker-compose.yaml  
-				
-				'''
-			}
-		}
-	}
-}
+ssh -t swarm-vm  << EOF
+echo ssh-success
+export ("$BUILD_NUMBER")
+git clone https://github.com/LeeroyC710/dockerpj
+cd dockerpj/
+docker stack deploy --compose-file docker-compose.yaml dockerpj-app
+EOF
