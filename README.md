@@ -1,7 +1,7 @@
 # Project
 To create a service application that depends on three other services to function properly. In this case for this project created a service app that generates a random number and random letter and joins the two together to generate a random sentence (dare) in service3 pushing this feature on to the main service (service4).
 
-*[Presentation](#presentation)
+*[Presentation](https://docs.google.com/presentation/d/1sSAeM0Jy_vNnw6RrfvDNmUF_LZkfKvl041Kc1tFScps/edit?usp=sharing)
  
 *[Brief](#brief)
 
@@ -11,7 +11,7 @@ To create a service application that depends on three other services to function
 
 *[Solution](#solution)
 
-*[Delivered Solution](#deliveredsolution)
+*[Delivered Solution](#deliveredsolution)(http://35.242.175.227/)
 
 *[Service Architecture](#servicearchitecture)
 
@@ -46,7 +46,7 @@ The project name: Darephase - through its development it was designed to allow u
 The app itself is running on the MVP but however it is currently using 4 images (services) in order for it to function to its purpose. The app has been tested whilst being developed for example some services connections and outputs, Postman was used to check if each service was giving out the right output. 
 
 
-<a name="Delivered solution"></a>
+<a name="Delivered Solution"></a>
 ## Delievered Solution 
 ![alt text](https://github.com/LeeroyC710/dockerpj/blob/master/documentation/DarePhase.png)
 To produce this solution i had to use tools that go hand to hand with each stage of the development stage. The solution is based on flask-app service with 3 services working with the frontend which is service4 in this case.  
