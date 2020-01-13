@@ -73,13 +73,13 @@ Please check the service architecture in the documentation
 - mkdir -p ~/.local/bin
 - echo 'PATH=$PATH:~/.local/bin' >> ~/.bashrc
 - source ~/.bashrc
-- ## install ansible with pip
+- install ansible with pip
 - pip install --user ansible
-- # check that ansible has been installed
+- check that ansible has been installed
 - ansible --version
 - cd dockerpj/ansible 
 - vim inventory change Both Jenkins-VM and Swarm-VM IP to your Jenkins-VM IP and Swarm-VM then save file
-- $ ansible-playbook -i inventory _all.yaml 
+- ansible-playbook -i inventory _all.yaml 
 - Now Go to your swarm-vm IP and add / or add port 80 to see the running application. 
 
 <a name="Technology used"></a>
