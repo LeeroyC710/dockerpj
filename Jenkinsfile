@@ -12,4 +12,4 @@ export ("$BUILD_NUMBER")
 git clone https://github.com/LeeroyC710/dockerpj
 cd dockerpj/
 docker stack deploy --compose-file docker-compose.yaml dockerpj-app
->>> EOF
+EOF
