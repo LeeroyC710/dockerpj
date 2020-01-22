@@ -63,7 +63,8 @@ Please check the service architecture in the documentation
 
 <a name="service installation"></a>
 ## Service Installation
-- Open a new VM GCP 
+```
+- Open a new VM GCP
 - Then open two other vms naming one jenkins and one swarm 
 - You then want to SSH $ 'ssh-keygen' command to produce the public-key
 - Once you have generated the Key you want to $ cat /home/location/id_rsa.pub to get the public
@@ -84,7 +85,7 @@ Please check the service architecture in the documentation
 - vim inventory change Both Jenkins-VM and Swarm-VM IP to your Jenkins-VM IP and Swarm-VM then save file
 - ansible-playbook -i inventory _all.yaml 
 - Now Go to your swarm-vm IP and add / or add port 80 to see the running application. 
-
+```
 <a name="Technology used"></a>
 ### Technology Used
 Here's a set of tools used for the project to come to a successful development: 
