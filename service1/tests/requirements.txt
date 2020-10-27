@@ -2,7 +2,7 @@ ansible==2.9.2
 attrs==19.3.0
 cffi==1.13.2
 Click==7.0
-cryptography==2.8
+cryptography==3.2
 distro==1.0.1
 Flask==1.1.1
 google-compute-engine==20191210.0
