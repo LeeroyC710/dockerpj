@@ -1,4 +1,4 @@
-ansible==2.9.2
+ansible==2.9.20
 attrs==19.3.0
 cffi==1.13.2
 Click==7.0
